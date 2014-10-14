@@ -2,8 +2,6 @@
 
 namespace VoidSector\Transformer\Adapter;
 
-use DOMDocument as Handler;
-
 class DOMDocument implements AdapterInterface
 {
  
@@ -13,7 +11,9 @@ class DOMDocument implements AdapterInterface
      */
     public function loadFromString($xml)
     {
-        return $this->getHandler()->loadXML($xml, LIBXML_NOXMLDECL);
+        $domDocument = new \DOMDocument();
+        $domDocument->loadXML($xml, LIBXML_NOXMLDECL);
+        return $domDocument;
     }
     
     /**
@@ -22,11 +22,17 @@ class DOMDocument implements AdapterInterface
      */
     public function loadFromFileOrUrl($xml)
     {
-        return $this->getHandler()->load($xml, LIBXML_NOXMLDECL);
+        $domDocument = new \DOMDocument();
+        $domDocument->load($xml, LIBXML_NOXMLDECL);
+        return $domDocument;
     }
+
     
-    public function getHandler()
+    /**
+     * @return \DomDocument
+     */
+    private function getHandler()
     {
-        return new Handler();
+        return new \DOMDocument();
     }
 }

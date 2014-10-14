@@ -10,8 +10,9 @@ class DOMDocumentTest extends PHPUnit_Framework_TestCase
     public function testloadFromString()
     {
         $domDocument = new DOMDocument();
+        $domDocument->loadXML('<foo><bar /></foo>');
         $this->assertEquals(
-            $domDocument->loadXML('<foo><bar /></foo>'),
+            $domDocument,
             $this->getHandler()->loadFromString('<foo><bar /></foo>')
         );
     }
@@ -21,8 +22,9 @@ class DOMDocumentTest extends PHPUnit_Framework_TestCase
     {
         $xmlFile = __DIR__ . '/../../../xmlDataProvider/1.book/structure.xml';
         $domDocument = new DOMDocument();
+        $domDocument->load($xmlFile);
         $this->assertEquals(
-            $domDocument->load($xmlFile),
+            $domDocument,
             $this->getHandler()->loadFromFileOrUrl($xmlFile)
         );
     }

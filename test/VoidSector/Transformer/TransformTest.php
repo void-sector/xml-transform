@@ -20,26 +20,26 @@ class TransformTest extends PHPUnit_Framework_TestCase
     }
 
     
-    public function testConstructorWithoutParameterToSetDefaultSimTransformDomDocumentAdapterType()
-    {
-        $transformer = new Transform;
-        
-        $this->assertInstanceOf(
-            '\VoidSector\Transformer\Adapter\DOMDocument',
-            $transformer->getAdapter()
-        );
-    }
-    
-
-    public function testConstructorWithParameterToSetSimTransformSimpleXmlAdapterType()
-    {
-        $transformer = new Transform('SimpleXmlElement');
-        
-        $this->assertInstanceOf(
-            '\VoidSector\Transformer\Adapter\SimpleXmlElement',
-            $transformer->getAdapter()
-        );
-    }
+//    public function testConstructorWithoutParameterToSetDefaultSimTransformDomDocumentAdapterType()
+//    {
+//        $transformer = new Transform;
+//        
+//        $this->assertInstanceOf(
+//            '\VoidSector\Transformer\Adapter\DOMDocument',
+//            $transformer->getAdapter()
+//        );
+//    }
+//    
+//
+//    public function testConstructorWithParameterToSetSimTransformSimpleXmlAdapterType()
+//    {
+//        $transformer = new Transform('SimpleXmlElement');
+//        
+//        $this->assertInstanceOf(
+//            '\VoidSector\Transformer\Adapter\SimpleXmlElement',
+//            $transformer->getAdapter()
+//        );
+//    }
   
     
     /**
