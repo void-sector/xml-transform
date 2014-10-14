@@ -2,14 +2,16 @@
 
 namespace test\VoidSector\Transformer\Adapter;
 
+use DOMDocument;
 use PHPUnit_Framework_TestCase;
 
 class DOMDocumentTest extends PHPUnit_Framework_TestCase
 {
     public function testloadFromString()
     {
+        $domDocument = new DOMDocument();
         $this->assertEquals(
-            \DOMDocument::loadXML('<foo><bar /></foo>'),
+            $domDocument->loadXML('<foo><bar /></foo>'),
             $this->getHandler()->loadFromString('<foo><bar /></foo>')
         );
     }
@@ -18,9 +20,9 @@ class DOMDocumentTest extends PHPUnit_Framework_TestCase
     public function testloadFromFileOrUrl()
     {
         $xmlFile = __DIR__ . '/../../../xmlDataProvider/1.book/structure.xml';
-        
+        $domDocument = new DOMDocument();
         $this->assertEquals(
-            \DOMDocument::load($xmlFile),
+            $domDocument->load($xmlFile),
             $this->getHandler()->loadFromFileOrUrl($xmlFile)
         );
     }
