@@ -1,0 +1,12 @@
+<root>
+    <books>
+        <renamedBookNode>
+            <author>Rasmus Lerdorf</author>
+            <title>php rules</title>
+        </renamedBookNode>
+        <renamedBookNode>
+            <author>Robert C. Martin</author>
+            <title>clean code</title>
+        </renamedBookNode>
+    </books>
+</root>

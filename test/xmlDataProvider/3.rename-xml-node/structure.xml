@@ -1,0 +1,12 @@
+<root>
+    <books>
+        <book>
+            <author>Rasmus Lerdorf</author>
+            <title>php rules</title>
+        </book>
+        <book>
+            <author>Robert C. Martin</author>
+            <title>clean code</title>
+        </book>
+    </books>
+</root>

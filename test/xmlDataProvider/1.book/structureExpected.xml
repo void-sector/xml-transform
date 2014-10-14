@@ -1,0 +1,10 @@
+<root>
+    <books>
+        <book foo="bar">
+            <title>foo</title>
+        </book>
+        <book foo="bar">
+            <title>bar</title>
+        </book>
+    </books>
+</root>

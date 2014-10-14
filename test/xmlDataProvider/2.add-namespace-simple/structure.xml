@@ -1,0 +1,10 @@
+<s:root xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+    <books>
+        <book>
+            <title>foo</title>
+        </book>
+        <book>
+            <title>bar</title>
+        </book>
+    </books>
+</s:root>
