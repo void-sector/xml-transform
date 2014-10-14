@@ -13,7 +13,7 @@ class DOMDocument implements AdapterInterface
      */
     public function loadFromString($xml)
     {
-        return Handler::loadXML($xml, LIBXML_NOXMLDECL);
+        return $this->getHandler()->loadXML($xml, LIBXML_NOXMLDECL);
     }
     
     /**
@@ -22,6 +22,11 @@ class DOMDocument implements AdapterInterface
      */
     public function loadFromFileOrUrl($xml)
     {
-        return Handler::load($xml, LIBXML_NOXMLDECL);
+        return $this->getHandler()->load($xml, LIBXML_NOXMLDECL);
+    }
+    
+    public function getHandler()
+    {
+        return new Handler();
     }
 }
