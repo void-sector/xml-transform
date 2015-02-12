@@ -1,8 +1,8 @@
 <?php
 
-namespace VoidSector\Transformer;
+namespace Transformer;
 
-use VoidSector\Transformer\Adapter\AdapterFactory;
+use Transformer\Adapter\AdapterFactory;
 use XSLTProcessor;
 
 class Transform

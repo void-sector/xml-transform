@@ -1,6 +1,6 @@
 <?php
 
-namespace test\VoidSector\Transformer\Adapter;
+namespace test\Transformer\Adapter;
 
 use PHPUnit_Framework_TestCase;
 
@@ -17,7 +17,7 @@ class SimpleXmlElementtTest extends PHPUnit_Framework_TestCase
     
     public function testloadFromFileOrUrl()
     {
-        $xmlFile = __DIR__ . '/../../../xmlDataProvider/1.book/structure.xml';
+        $xmlFile = __DIR__ . '/../xmlDataProvider/1.book/structure.xml';
         
         $this->assertEquals(
             new \SimpleXmlElement($xmlFile, 0, true),
@@ -32,6 +32,6 @@ class SimpleXmlElementtTest extends PHPUnit_Framework_TestCase
      */
     private function getHandler()
     {
-        return new \VoidSector\Transformer\Adapter\SimpleXmlElement();
+        return new \Transformer\Adapter\SimpleXmlElement();
     }    
 }

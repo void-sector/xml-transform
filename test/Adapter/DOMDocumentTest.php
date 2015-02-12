@@ -1,6 +1,6 @@
 <?php
 
-namespace test\VoidSector\Transformer\Adapter;
+namespace test\Transformer\Adapter;
 
 use DOMDocument;
 use PHPUnit_Framework_TestCase;
@@ -20,7 +20,7 @@ class DOMDocumentTest extends PHPUnit_Framework_TestCase
     
     public function testloadFromFileOrUrl()
     {
-        $xmlFile = __DIR__ . '/../../../xmlDataProvider/1.book/structure.xml';
+        $xmlFile = __DIR__ . '/../xmlDataProvider/1.book/structure.xml';
         $domDocument = new DOMDocument();
         $domDocument->load($xmlFile);
         $this->assertEquals(
@@ -36,6 +36,6 @@ class DOMDocumentTest extends PHPUnit_Framework_TestCase
      */
     private function getHandler()
     {
-        return new \VoidSector\Transformer\Adapter\DOMDocument();
+        return new \Transformer\Adapter\DOMDocument();
     }    
 }

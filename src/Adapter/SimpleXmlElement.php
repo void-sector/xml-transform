@@ -1,6 +1,6 @@
 <?php
 
-namespace VoidSector\Transformer\Adapter;
+namespace Transformer\Adapter;
 
 use SimpleXMLElement as Handler;
 

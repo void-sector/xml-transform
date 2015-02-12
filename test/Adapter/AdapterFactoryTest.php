@@ -4,7 +4,7 @@ namespace test\VoidSector\Transformer\Adapter;
 
 use InvalidArgumentException;
 use PHPUnit_Framework_TestCase;
-use VoidSector\Transformer\Adapter\AdapterFactory;
+use Transformer\Adapter\AdapterFactory;
 
 
 class AdapterFactoryTest extends PHPUnit_Framework_TestCase
@@ -12,7 +12,7 @@ class AdapterFactoryTest extends PHPUnit_Framework_TestCase
     public function testGetDefaultTransformAdapter()
     {
         $this->assertInstanceOf(
-            'VoidSector\Transformer\Adapter\SimpleXmlElement',
+            'Transformer\Adapter\SimpleXmlElement',
             AdapterFactory::getAdapter('SimpleXmlElement')
         );
     }
@@ -21,7 +21,7 @@ class AdapterFactoryTest extends PHPUnit_Framework_TestCase
     public function testGetDomDocumentTransformAdapter()
     {
         $this->assertInstanceOf(
-            'VoidSector\Transformer\Adapter\DOMDocument',
+            'Transformer\Adapter\DOMDocument',
             AdapterFactory::getAdapter('DOMDocument')
         );
     }

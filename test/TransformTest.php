@@ -1,9 +1,9 @@
 <?php
 
-namespace test\VoidSector\Transformer;
+namespace test\Transformer;
 
 use PHPUnit_Framework_TestCase;
-use VoidSector\Transformer\Transform;
+use Transformer\Transform;
 
 class TransformTest extends PHPUnit_Framework_TestCase
 {
@@ -16,7 +16,7 @@ class TransformTest extends PHPUnit_Framework_TestCase
     public function __construct($name = NULL, array $data = array(), $dataName = '')
     {
         parent::__construct($name, $data, $dataName);
-        $this->xmlDataProviderDir = __DIR__ . '/../../xmlDataProvider/';
+        $this->xmlDataProviderDir = __DIR__ . '/xmlDataProvider/';
     }
 
     

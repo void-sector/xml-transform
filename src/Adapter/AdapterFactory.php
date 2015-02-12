@@ -1,10 +1,10 @@
 <?php
 
-namespace VoidSector\Transformer\Adapter;
+namespace Transformer\Adapter;
 
 use InvalidArgumentException;
-use VoidSector\Transformer\Adapter\DOMDocument;
-use VoidSector\Transformer\Adapter\SimpleXmlElement;
+use Transformer\Adapter\DOMDocument;
+use Transformer\Adapter\SimpleXmlElement;
 
 class AdapterFactory
 {

@@ -2,8 +2,8 @@
     "name": "voidsector/transform",
     "description": "VoidSector Transormer",
     "autoload": {
-        "psr-0": {
-            "VoidSector\\Transformer": "src/"
+        "psr-4": {
+            "Transformer\\": "src/"
         }
     },
     "require": {
