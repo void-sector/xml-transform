@@ -36,8 +36,10 @@ class XMLTransformerTest extends PHPUnit_Framework_TestCase
         
         foreach ($directoryIterator as $directory) {
             if (!$directoryIterator->isDot() && $directory->isDir() && 'ignore' !== $directory->getExtension()) {
+                $tests[] = array($directory->getFilename(), null, 'string');
                 $tests[] = array($directory->getFilename(), 'DOMDocument', 'string');
                 $tests[] = array($directory->getFilename(), 'SimpleXmlElement', 'string');
+                $tests[] = array($directory->getFilename(), null, 'object');
                 $tests[] = array($directory->getFilename(), 'DOMDocument', 'object');
                 $tests[] = array($directory->getFilename(), 'SimpleXmlElement', 'object');
             }
