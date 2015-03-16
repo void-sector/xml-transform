@@ -3,9 +3,9 @@
 namespace test\Transformer;
 
 use PHPUnit_Framework_TestCase;
-use Transformer\Transform;
+use Transformer\Transformer;
 
-class TransformTest extends PHPUnit_Framework_TestCase
+class TransformerTest extends PHPUnit_Framework_TestCase
 {
     /**
      *  path to where to find the xml/xsl test files
@@ -19,28 +19,6 @@ class TransformTest extends PHPUnit_Framework_TestCase
         $this->xmlDataProviderDir = __DIR__ . '/xmlDataProvider/';
     }
 
-    
-//    public function testConstructorWithoutParameterToSetDefaultSimTransformDomDocumentAdapterType()
-//    {
-//        $transformer = new Transform;
-//        
-//        $this->assertInstanceOf(
-//            '\VoidSector\Transformer\Adapter\DOMDocument',
-//            $transformer->getAdapter()
-//        );
-//    }
-//    
-//
-//    public function testConstructorWithParameterToSetSimTransformSimpleXmlAdapterType()
-//    {
-//        $transformer = new Transform('SimpleXmlElement');
-//        
-//        $this->assertInstanceOf(
-//            '\VoidSector\Transformer\Adapter\SimpleXmlElement',
-//            $transformer->getAdapter()
-//        );
-//    }
-  
     
     /**
      * Dynamic dataProvider
@@ -78,7 +56,7 @@ class TransformTest extends PHPUnit_Framework_TestCase
         $expected = $this->xmlDataProviderDir . $testCase . '/structureExpected.xml';
         $xslFile = $this->xmlDataProviderDir . $testCase . '/transform.xsl';
         
-        $transformer = new Transform($adapter);
+        $transformer = new Transformer($adapter);
         $transformer->transform(
             file_get_contents($xmlFile),
             $xslFile
