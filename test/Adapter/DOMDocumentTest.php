@@ -32,10 +32,10 @@ class DOMDocumentTest extends PHPUnit_Framework_TestCase
     
     /**
      * Helper Function
-     * @return \SimXml\Transformer\Adapter\DOMDocument
+     * @return \Xml\Transformer\Adapter\DOMDocument
      */
     private function getHandler()
     {
-        return new \Transformer\Adapter\DOMDocument();
+        return new \Transformer\Adapter\DOMDocumentHandler();
     }    
 }

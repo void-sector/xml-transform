@@ -10,15 +10,18 @@ class Transformer
     
     const DEFAULT_ADAPTER = 'DOMDocument';
     
+    
     /**
      * @var AdapterInterface [DOMDocument|SimpleXmlElement]
      */
     private $adapter;
     
+    
     /**
      * @var \DOMDocument|\SimpleXmlElement
      */
     private $xmlDocument;
+    
     
     /**
      * @var XSLTProcessor 
@@ -41,6 +44,10 @@ class Transformer
     }
 
     
+    /**
+     * 
+     * @return type
+     */
     public function getAdapter()
     {
         return $this->adapter;
@@ -64,7 +71,7 @@ class Transformer
         
         $this->xmlDocument = $xmlDocument;
         
-        $this->processor()->importStyleSheet(
+        $this->getXSLProcessor()->importStyleSheet(
             $this->getAdapter()->loadFromFileOrUrl($styleSheet)
         );
         
@@ -78,10 +85,11 @@ class Transformer
      */
     public function toString()
     {
-        return $this->processor()->transformToXml(
+        return $this->getXSLProcessor()->transformToXml(
             $this->xmlDocument
         );
     }
+    
     
     /**
      * Transform to DOMDocument
@@ -89,7 +97,7 @@ class Transformer
      */
     public function toDOMDocument()
     {
-        return $this->processor()->transformToDoc(
+        return $this->getXSLProcessor()->transformToDoc(
             $this->xmlDocument
         );
     }
@@ -99,7 +107,7 @@ class Transformer
      * Get XSLTProcessor processor
      * @return XSLTProcessor
      */
-    private function processor()
+    private function getXSLProcessor()
     {
         if (null === $this->processor) {
             $this->processor = new XSLTProcessor;

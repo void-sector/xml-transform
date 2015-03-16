@@ -12,7 +12,7 @@ class AdapterFactoryTest extends PHPUnit_Framework_TestCase
     public function testGetDefaultTransformAdapter()
     {
         $this->assertInstanceOf(
-            'Transformer\Adapter\SimpleXmlElement',
+            'Transformer\Adapter\SimpleXmlElementHandler',
             AdapterFactory::getAdapter('SimpleXmlElement')
         );
     }
@@ -21,7 +21,7 @@ class AdapterFactoryTest extends PHPUnit_Framework_TestCase
     public function testGetDomDocumentTransformAdapter()
     {
         $this->assertInstanceOf(
-            'Transformer\Adapter\DOMDocument',
+            'Transformer\Adapter\DOMDocumentHandler',
             AdapterFactory::getAdapter('DOMDocument')
         );
     }

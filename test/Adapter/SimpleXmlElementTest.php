@@ -28,10 +28,10 @@ class SimpleXmlElementtTest extends PHPUnit_Framework_TestCase
     
     /**
      * Helper Function
-     * @return \SimXml\Transformer\Adapter\SimpleXmlElement
+     * @return \Transformer\Adapter\SimpleXmlElement
      */
     private function getHandler()
     {
-        return new \Transformer\Adapter\SimpleXmlElement();
+        return new \Transformer\Adapter\SimpleXmlElementHandler();
     }    
 }

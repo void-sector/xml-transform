@@ -2,9 +2,9 @@
 
 namespace Transformer\Adapter;
 
-use SimpleXMLElement as Handler;
+use \SimpleXMLElement as XmlHandler;
 
-class SimpleXmlElement implements AdapterInterface
+class SimpleXmlElementHandler implements AdapterInterface
 {
     
     /**
@@ -13,7 +13,7 @@ class SimpleXmlElement implements AdapterInterface
      */    
     public function loadFromString($xml)
     {
-        return new Handler($xml);
+        return new XmlHandler($xml);
     }
     
     /**
@@ -22,6 +22,6 @@ class SimpleXmlElement implements AdapterInterface
      */    
     public function loadFromFileOrUrl($xml)
     {
-        return new Handler($xml, 0, true);
+        return new XmlHandler($xml, 0, true);
     }
 }

@@ -3,8 +3,8 @@
 namespace Transformer\Adapter;
 
 use InvalidArgumentException;
-use Transformer\Adapter\DOMDocument;
-use Transformer\Adapter\SimpleXmlElement;
+use Transformer\Adapter\DOMDocumentHandler;
+use Transformer\Adapter\SimpleXmlElementHandler;
 
 class AdapterFactory
 {
@@ -19,10 +19,10 @@ class AdapterFactory
     {
         switch ($adapter) {
             case 'DOMDocument' :
-                return new DOMDocument;
+                return new DOMDocumentHandler;
                 
             case 'SimpleXmlElement' :
-                return new SimpleXmlElement;
+                return new SimpleXmlElementHandler;
             
             default: 
                 throw new InvalidArgumentException('unsupported $adapter sepecified');
