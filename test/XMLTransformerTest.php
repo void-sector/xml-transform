@@ -3,9 +3,9 @@
 namespace test\Transformer;
 
 use PHPUnit_Framework_TestCase;
-use Transformer\Transformer;
+use Transformer\XMLTransformer;
 
-class TransformerTest extends PHPUnit_Framework_TestCase
+class XMLTransformerTest extends PHPUnit_Framework_TestCase
 {
     /**
      *  path to where to find the xml/xsl test files
@@ -56,7 +56,7 @@ class TransformerTest extends PHPUnit_Framework_TestCase
         $expected = $this->xmlDataProviderDir . $testCase . '/structureExpected.xml';
         $xslFile = $this->xmlDataProviderDir . $testCase . '/transform.xsl';
         
-        $transformer = new Transformer($adapter);
+        $transformer = new XMLTransformer($adapter);
         $transformer->transform(
             file_get_contents($xmlFile),
             $xslFile

@@ -5,7 +5,7 @@ namespace Transformer;
 use Transformer\Adapter\AdapterFactory;
 use XSLTProcessor;
 
-class Transformer
+class XMLTransformer
 {
     
     const DEFAULT_ADAPTER = 'DOMDocument';
