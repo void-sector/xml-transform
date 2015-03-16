@@ -59,7 +59,6 @@ class XMLTransformer
      * 
      * @param string|DOMDocument|SimpleXmlElement $xmlDocument
      * @param string $styleSheet
-     * @return Transform
      * 
      * @todo refactor (this method does not represent what it does, maybe rename it to initialize?!?!?!)
      */
@@ -74,8 +73,6 @@ class XMLTransformer
         $this->getXSLProcessor()->importStyleSheet(
             $this->getAdapter()->loadFromFileOrUrl($styleSheet)
         );
-        
-        return $this;
     }
  
     

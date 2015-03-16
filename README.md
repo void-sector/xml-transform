@@ -8,8 +8,13 @@ Usage:
 ```php
 $xmlTransformer = new XMLTransformer();
 
-$transformedDocuemnt = $xmlTransformer->transform(
+$xmlTransformer->transform(
     new SimpleXMLElement('<foo><bar>foo</bar></foo>'),
     '../stylesheet.xsl'
 );
+
+$transformedXMLString = $xmlTransformer->toString();
+// OR
+$transformedXMLDocment = $xmlTransformer->toDOMDocument();
+
 ```
